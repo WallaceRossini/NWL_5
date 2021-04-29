@@ -6,7 +6,7 @@ import colors from '../styles/colors';
 import fonts from '../styles/fonts';
 import { useNavigation } from '@react-navigation/core';
 export function Welcome() {
-  
+
   const navitagion = useNavigation();
 
   function handleStart() {
@@ -31,15 +31,15 @@ export function Welcome() {
         />
 
         <Text style={styles.subtitle}>
-          Não esqueça mais de regar suas {'\n'} plantas.
-        Nós cuidamos de lembrar você {'\n'} sempre que precisar.
-      </Text>
+          Não esqueça mais de regar suas {'\n'}plantas.
+          Nós cuidamos de lembrar você{'\n'} sempre que precisar.
+       </Text>
 
         <TouchableOpacity
           style={styles.button}
           activeOpacity={0.7}
           onPress={handleStart}
-          >
+        >
           <Feather name="chevron-right" style={styles.buttonIcon} />
         </TouchableOpacity>
 
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  wrapper:{
+  wrapper: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'space-around',
@@ -69,7 +69,6 @@ const styles = StyleSheet.create({
   subtitle: {
     textAlign: 'center',
     fontSize: 18,
-    paddingHorizontal: 20,
     color: colors.heading,
     fontFamily: fonts.text
   },
