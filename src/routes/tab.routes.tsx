@@ -10,6 +10,7 @@ import { PlantSelect } from '../pages/PlantSelect';
 import { PlantSave } from '../pages/PlantSave';
 import { MyPlants } from '../pages/MyPlants';
 import { MaterialIcons } from '@expo/vector-icons';
+import { Platform } from 'react-native';
 
 const tabRoutes = createBottomTabNavigator();
 
@@ -19,14 +20,14 @@ const AuthRoutes = () => (
       activeTintColor: colors.green,
       inactiveTintColor: colors.heading,
       labelPosition: 'beside-icon',
-      // style: {
-      //   paddingVertical: 20,
-      //   height: 88
-      // }
+      style: {
+        paddingVertical: Platform.OS === 'ios' ? 20 : 0,
+        height: 88
+      }
     }}
   >
     <tabRoutes.Screen
-      name="PlantSelect"
+      name="Nova Planta"
       component={PlantSelect}
       options={{
         tabBarIcon: (({ size, color }) => (
@@ -39,7 +40,7 @@ const AuthRoutes = () => (
     />
 
     <tabRoutes.Screen
-      name="MyPlants"
+      name="Minhas Plantas"
       component={MyPlants}
       options={{
         tabBarIcon: (({ size, color }) => (
